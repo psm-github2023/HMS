@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Selection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    
+    .options-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .options-container h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .options-container button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 10px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="options-container">
+    <h1>Choose Login Option</h1>
+    <button onclick="redirectToPage('admin')">Admin</button>
+    <button onclick="redirectToPage('doctor')">Doctor</button>
+    <button onclick="redirectToPage('patient')">Patient</button>
+  </div>
+
+  <script>
+    function redirectToPage(userType) {
+      // Redirect to the assigned page based on the user type
+      switch (userType) {
+        case 'admin':
+          window.location.href = 'C://Users/Techno/Documents/BCT_HMS/loginadmin.html';
+          break;
+        case 'doctor':
+          window.location.href = 'C://Users/Techno/Documents/BCT_HMS/logindr.html';
+          break;
+        case 'patient':
+          window.location.href = 'C://Users/Techno/Documents/BCT_HMS/loginp.html';
+          break;
+        default:
+          alert('Invalid user type');
+      }
+    }
+  </script>
+</body>
+</html>
